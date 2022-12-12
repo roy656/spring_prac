@@ -22,7 +22,7 @@ public class AopBrowser implements MyBrowser{
             System.out.println("AopBrowser loading html from : " + url);
         }
 
-        System.out.println("AopBrowser use cache.");
+        System.out.println("AopBrowser use cache");
         return html;
     }
 }

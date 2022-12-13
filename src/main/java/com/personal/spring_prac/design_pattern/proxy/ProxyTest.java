@@ -15,7 +15,7 @@ public class ProxyTest {
 */
 
         // 프록시 패턴으로 Aop 기능
-        // 메소드 시간 체크시 동시성 문제 때문에
+        // 메소드 시간 체크시 동시성 문제 때문에 AtomicLong 사용
         AtomicLong start = new AtomicLong();
         AtomicLong finish = new AtomicLong();
 

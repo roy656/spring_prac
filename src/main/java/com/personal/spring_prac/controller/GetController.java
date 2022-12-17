@@ -1,7 +1,7 @@
 package com.personal.spring_prac.controller;
 
 
-import com.personal.spring_prac.dto.UserRequestDto;
+import com.personal.spring_prac.dto.GetRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -58,7 +58,7 @@ public class GetController {
     // dto 클래스의 변수명을 매칭 해주어야 한다
     // ?name=roy&age=30&email=v0o0605@gmail.com  쿼리 파라미터 부분을 스프링부트에서 판단을 해준다.
     @GetMapping(path = "query-param03")
-    public String queryParam03(UserRequestDto requestDto) {
+    public String queryParam03(GetRequestDto requestDto) {
 
         System.out.println(requestDto.getName());
         System.out.println(requestDto.getAge());

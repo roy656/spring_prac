@@ -2,8 +2,10 @@ package com.personal.spring_prac.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class MemberRequestDto {
+public class PostRequestDto {
 
     private String account;
 
@@ -12,4 +14,6 @@ public class MemberRequestDto {
     private int password;
 
     private String address;
+
+    private List<CarDto> carList;
 }

@@ -1,6 +1,6 @@
 package com.personal.spring_prac.controller;
 
-import com.personal.spring_prac.dto.MemberRequestDto;
+import com.personal.spring_prac.dto.PostRequestDto;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ public class PostController {
 
     // dto 사용
     @PostMapping("/members02")
-    public MemberRequestDto creatMember(@RequestBody MemberRequestDto requestDto) {
+    public PostRequestDto creatMember(@RequestBody PostRequestDto requestDto) {
 
         System.out.println(requestDto);
 

@@ -11,7 +11,7 @@ public class ObjectMapperTest {
 
         // Object -> text
         // ObjectMapper 는 변환할 객체의 get method 를 활용한다. (ObjectMapper 가 참조하는 클래스 내의 다른 메소드명에 get 을 넣으면 안된다.)
-        User user = new User("Roy", 30);
+        User user = new User("Roy", 30, "010-1111-2222");
         var text = objectMapper.writeValueAsString(user);
         System.out.println(text);
 

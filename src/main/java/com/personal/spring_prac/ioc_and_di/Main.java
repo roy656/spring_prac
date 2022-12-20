@@ -1,4 +1,4 @@
-package com.personal.spring_prac.ioc.di;
+package com.personal.spring_prac.ioc_and_di;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

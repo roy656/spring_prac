@@ -1,8 +1,4 @@
-package com.personal.spring_prac.ioc.di;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+package com.personal.spring_prac.ioc_and_di;
 
 import java.util.Base64;
 

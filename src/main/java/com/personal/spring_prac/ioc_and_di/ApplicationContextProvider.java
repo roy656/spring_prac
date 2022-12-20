@@ -1,4 +1,4 @@
-package com.personal.spring_prac.ioc.di;
+package com.personal.spring_prac.ioc_and_di;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

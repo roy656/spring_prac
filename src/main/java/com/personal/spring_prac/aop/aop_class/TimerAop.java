@@ -1,4 +1,4 @@
-package com.personal.spring_prac.aop;
+package com.personal.spring_prac.aop.aop_class;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

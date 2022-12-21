@@ -1,4 +1,4 @@
-package com.personal.spring_prac.aop;
+package com.personal.spring_prac.aop.aop_class;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;

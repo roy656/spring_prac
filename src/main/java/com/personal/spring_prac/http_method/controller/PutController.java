@@ -1,6 +1,6 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
-import com.personal.spring_prac.dto.PutRequestDto;
+import com.personal.spring_prac.http_method.dto.PutRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -1,6 +1,6 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
-import com.personal.spring_prac.dto.ResponseDto;
+import com.personal.spring_prac.http_method.dto.ResponseDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

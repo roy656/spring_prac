@@ -1,6 +1,7 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
-import com.personal.spring_prac.dto.ResponseDto;
+
+import com.personal.spring_prac.http_method.dto.ResponseDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

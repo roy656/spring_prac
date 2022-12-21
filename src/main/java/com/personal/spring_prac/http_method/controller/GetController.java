@@ -1,7 +1,6 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
-
-import com.personal.spring_prac.dto.GetRequestDto;
+import com.personal.spring_prac.http_method.dto.GetRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

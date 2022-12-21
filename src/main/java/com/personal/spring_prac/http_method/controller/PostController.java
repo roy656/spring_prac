@@ -1,6 +1,6 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
-import com.personal.spring_prac.dto.PostRequestDto;
+import com.personal.spring_prac.http_method.dto.PostRequestDto;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

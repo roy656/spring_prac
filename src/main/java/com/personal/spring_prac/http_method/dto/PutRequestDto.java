@@ -1,7 +1,8 @@
-package com.personal.spring_prac.dto;
+package com.personal.spring_prac.http_method.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.personal.spring_prac.http_method.dto.CarDto;
 import lombok.Data;
 
 import java.util.List;

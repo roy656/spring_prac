@@ -1,4 +1,4 @@
-package com.personal.spring_prac.controller;
+package com.personal.spring_prac.http_method.controller;
 
 import org.springframework.web.bind.annotation.*;
 

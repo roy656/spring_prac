@@ -1,0 +1,21 @@
+{
+  "name": "이순신,",
+  "age" : "50",
+  "car" : [
+    {
+      "name" : "K5",
+      "car_number" : "10고1234",
+      "TYPE" : ""
+    },
+    {
+      "name" : "Q6",
+      "car_number" : "20고5678",
+      "TYPE" : ""
+    },
+    {
+      "name" : "GV70",
+      "car_number" : "30나1000",
+      "TYPE" : ""
+    }
+  ]
+}

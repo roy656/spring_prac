@@ -2,6 +2,8 @@ package com.personal.spring_prac.validation.controller;
 
 
 import com.personal.spring_prac.validation.dto.Member;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,10 +30,14 @@ public class ValController {
 
                 System.out.println("field : " + field.getField());      // 어떤 field 에서
                 System.out.println(message);                            // 어떤 에러가 발생했는지
+
+                sb.append("field : " + field.getField() + "\n");        // 깔끔하게 StringBuilder 로 정리해서 리턴
+                sb.append("message : " + message);
             });
+
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(sb);
         }
 
-        System.out.println(member);
-        return member;
+        return ResponseEntity.ok(member);
     }
 }

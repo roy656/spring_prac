@@ -2,7 +2,7 @@
 
 
 1. controller 에서의 Http method 사용 예제
-2. controller 에서의 response 유형들
+2. response 유형들
 3. ObjectMapper 활용
 
 4. Ioc

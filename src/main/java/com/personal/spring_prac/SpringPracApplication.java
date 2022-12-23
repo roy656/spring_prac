@@ -10,8 +10,6 @@ public class SpringPracApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringPracApplication.class, args);
-
-        System.out.println(Base64.getEncoder().encodeToString("1111@gmail.com".getBytes()));
     }
 
 }

@@ -18,9 +18,9 @@ import javax.validation.Valid;
 public class ValController {
 
     // 입력받는 파라미터 앞에 @Valid 를 붙혀 검증을 한다. 양식에 맞지 않는경우 예외가 터지는데
-    // BindingResult 를 이용하면 잘못된 값이 안에 들어오게 된
+    // BindingResult 를 이용하면 예외를 터뜨리지 않고 잘못된 값이 안에 들어오게 된다.
     @PostMapping("/member")
-    public Object user(@Valid @RequestBody Member member, BindingResult bindingResult) {
+    public Object user(@Valid @RequestBody Member member, BindingResult bindingResult) {    // 검증을 원하는 객체에 @Valid 를 붙혀야한다.
 
         if(bindingResult.hasErrors()) {
             StringBuilder sb = new StringBuilder();

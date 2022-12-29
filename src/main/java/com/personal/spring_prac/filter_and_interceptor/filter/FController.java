@@ -1,4 +1,4 @@
-package com.personal.spring_prac.filter_and_interceptor;
+package com.personal.spring_prac.filter_and_interceptor.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;

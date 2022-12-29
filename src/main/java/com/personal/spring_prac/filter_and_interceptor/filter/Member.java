@@ -1,4 +1,4 @@
-package com.personal.spring_prac.filter_and_interceptor;
+package com.personal.spring_prac.filter_and_interceptor.filter;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -13,6 +13,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
     private final AuthInterceptor authInterceptor;
 
+    // 인터셉터 추가하는 메서드 오버라이딩
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authInterceptor);

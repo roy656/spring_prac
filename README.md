@@ -13,3 +13,5 @@
 8. Spring Boot Validation
 9. Spring Boot Exception
 10. Filter & Interceptor
+11. Server to Server
+12. Rest Template

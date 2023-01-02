@@ -1,9 +1,9 @@
 package com.personal.spring_prac.rest_template.client.client_controller;
 
-import com.personal.spring_prac.rest_template.client.dto.PersonResponse;
 import com.personal.spring_prac.rest_template.client.client_service.RestTemplateService;
+import com.personal.spring_prac.rest_template.client.dto.PersonResponse;
+import com.personal.spring_prac.rest_template.client.dto.Req;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,5 +34,9 @@ public class CController {
         return restTemplateService.exchange();
     }
 
+    @GetMapping("/exchange")
+    public Req<PersonResponse> genericExchange() {
+        return restTemplateService.genericExchange();
+    }
 
 }

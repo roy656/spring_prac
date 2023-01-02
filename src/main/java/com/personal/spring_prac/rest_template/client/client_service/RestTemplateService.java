@@ -104,7 +104,7 @@ public class RestTemplateService {
     }
 
 
-    public PersonResponse genericExchange() {
+    public Req<PersonResponse> genericExchange() {
 
         URI uri = UriComponentsBuilder
                 .fromUriString("http://localhost:8080")
@@ -138,6 +138,6 @@ public class RestTemplateService {
         ResponseEntity<Req<PersonResponse>> response
                 = restTemplate.exchange(reqEntity, new ParameterizedTypeReference<>() {});
 
-        return response.getBody().getResponseBody();
+        return response.getBody();
     }
 }

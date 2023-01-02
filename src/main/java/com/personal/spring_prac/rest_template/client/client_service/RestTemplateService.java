@@ -1,6 +1,8 @@
 package com.personal.spring_prac.rest_template.client.client_service;
 
+import com.personal.spring_prac.rest_template.client.dto.PersonRequest;
 import com.personal.spring_prac.rest_template.client.dto.PersonResponse;
+import com.personal.spring_prac.rest_template.server.dto.Person;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -33,5 +35,33 @@ public class RestTemplateService {
         System.out.println(result.getStatusCode());
         System.out.println(result.getBody());
         return result.getBody();
+    }
+
+    // Post 메서드 예제
+    public PersonResponse hi() {
+
+        URI uri = UriComponentsBuilder
+                .fromUriString("http://localhost:8080")
+                .path("/api/server/person/{personId}/name/{personName}")
+                .encode()
+                .build()
+                .expand(200, "Roy")     // expand 로 RequestBody 를 추가
+                .toUri();
+        System.out.println(uri);
+
+        PersonRequest request = new PersonRequest();
+        request.setName("Roy");
+        request.setAge(30);
+
+        RestTemplate restTemplate = new RestTemplate();
+        // postForEntity 를 사용해 uri 주소에 request 를 바디에 담아보내고 응답은 PersonResponse 로 받을것이다
+        ResponseEntity<PersonResponse> response = restTemplate.postForEntity(uri, request, PersonResponse.class);
+
+        System.out.println(response.getStatusCode());
+        System.out.println(response.getHeaders());
+        System.out.println(response.getBody());
+
+        return response.getBody();
+
     }
 }

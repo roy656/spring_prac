@@ -24,8 +24,15 @@ public class CController {
         return restTemplateService.hello();
     }
 
-    @PostMapping("/hi")
+    @GetMapping("/hi")
     public PersonResponse hi() {
         return restTemplateService.hi();
     }
+
+    @GetMapping("/exchange")
+    public PersonResponse exchange() {
+        return restTemplateService.exchange();
+    }
+
+
 }

@@ -3,6 +3,8 @@ package com.personal.spring_prac.rest_template.client.client_service;
 import com.personal.spring_prac.rest_template.client.dto.PersonRequest;
 import com.personal.spring_prac.rest_template.client.dto.PersonResponse;
 import com.personal.spring_prac.rest_template.server.dto.Person;
+import org.springframework.http.MediaType;
+import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -66,5 +68,37 @@ public class RestTemplateService {
         return response.getBody();
 
         // http body -> object -> objectMapper -> json -> restTemplate -> http body json
+    }
+
+    public PersonResponse exchange() {
+
+        URI uri = UriComponentsBuilder
+                .fromUriString("http://localhost:8080")
+                .path("/api/server/person/{personId}/name/{personName}")
+                .encode()
+                .build()
+                .expand(200, "Roy")     // expand 로 RequestBody 를 추가
+                .toUri();
+
+        System.out.println(uri);
+
+
+        // 보낼때는 RequestEntity 사용
+        PersonRequest request = new PersonRequest();
+        request.setName("Roy");
+        request.setAge(30);
+
+        RequestEntity<PersonRequest> reqEntity = RequestEntity
+                .post(uri)
+                .contentType(MediaType.APPLICATION_JSON)        // contentType 은 JSON
+                .header("x-Authorization","abcd")   // header 로 header 값 주입
+                .header("custom-header","1234")
+                .body(request);
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<PersonResponse> response = restTemplate.exchange(reqEntity, PersonResponse.class);
+
+        return response.getBody();
     }
 }

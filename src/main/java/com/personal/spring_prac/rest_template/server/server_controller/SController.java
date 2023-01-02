@@ -27,4 +27,16 @@ public class SController {
         log.info("client request : {}", person);
         return person;
     }
+
+    // header 값 포함 예제
+    @PostMapping("/exchange/{personId}/name/{personName}")
+    public Person hiIncludeHeader(@RequestBody Person person,
+                                  @PathVariable int personId,
+                                  @PathVariable String personName,
+                                  @RequestHeader("x-Athorization") String athorization,
+                                  @RequestHeader("custom-header") String customHeader) {
+        log.info("client request : {}", person);
+        log.info("authorization : {}, custom header : {}", athorization, customHeader);
+        return person;
+    }
 }

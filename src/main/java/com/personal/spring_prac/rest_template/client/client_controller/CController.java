@@ -3,6 +3,7 @@ package com.personal.spring_prac.rest_template.client.client_controller;
 import com.personal.spring_prac.rest_template.client.dto.PersonResponse;
 import com.personal.spring_prac.rest_template.client.client_service.RestTemplateService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,10 @@ public class CController {
     public PersonResponse hello() {
 
         return restTemplateService.hello();
+    }
+
+    @PostMapping("/hi")
+    public PersonResponse hi() {
+        return restTemplateService.hi();
     }
 }

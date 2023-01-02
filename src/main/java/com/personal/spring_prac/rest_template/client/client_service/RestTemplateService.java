@@ -13,6 +13,7 @@ import java.net.URI;
 @Service
 public class RestTemplateService {
 
+    // GET 메서드 예제
     public PersonResponse hello() {
 
         // Client 가 요청을 보낼 서버의 주소 uri 를 만든다.
@@ -25,7 +26,6 @@ public class RestTemplateService {
                 .build()
                 .toUri();
         // 이렇게 빌드할 경우 uri 는 http://localhost:8080/api/server/hello?name=Roy&age=30
-
         System.out.println(uri.toString());
 
         RestTemplate restTemplate = new RestTemplate();
@@ -37,7 +37,7 @@ public class RestTemplateService {
         return result.getBody();
     }
 
-    // Post 메서드 예제
+    // POST 메서드 예제
     public PersonResponse hi() {
 
         URI uri = UriComponentsBuilder
@@ -47,7 +47,9 @@ public class RestTemplateService {
                 .build()
                 .expand(200, "Roy")     // expand 로 RequestBody 를 추가
                 .toUri();
+        // 해당 빌드의 경우 uri 주소는 http://localhost:8080/api/server/person/{personId}/name/{personName}
         System.out.println(uri);
+
 
         PersonRequest request = new PersonRequest();
         request.setName("Roy");
@@ -63,5 +65,6 @@ public class RestTemplateService {
 
         return response.getBody();
 
+        // http body -> object -> objectMapper -> json -> restTemplate -> http body json
     }
 }
